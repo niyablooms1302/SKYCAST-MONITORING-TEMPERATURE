@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast — Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+
+    <div class="app">
+
+        <header>
+            <div class="logo">
+                <span>☁️</span>
+                <div>
+                    <h2>SkyCast</h2>
+                    <p>Weather Dashboard</p>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search city..."
+                >
+                <button onclick="searchCity()">🔍</button>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="hero-card">
+
+                <div class="location">
+                    <span>📍</span>
+                    <div>
+                        <h3 id="city">Mumbai, India</h3>
+                        <p id="date">Monday, October 7</p>
+                    </div>
+                </div>
+
+                <div class="weather-main">
+                    <div class="weather-icon" id="weatherIcon">
+                        ☀️
+                    </div>
+
+                    <div>
+                        <div class="temperature">
+                            <span id="temperature">28</span>°
+                        </div>
+
+                        <h2 id="condition">Mostly Sunny</h2>
+                        <p>Feels like <span id="feelsLike">30</span>°</p>
+                    </div>
+                </div>
+
+                <div class="weather-stats">
+
+                    <div class="stat">
+                        <span>💧</span>
+                        <div>
+                            <small>Humidity</small>
+                            <strong id="humidity">72%</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat">
+                        <span>💨</span>
+                        <div>
+                            <small>Wind</small>
+                            <strong id="wind">14 km/h</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat">
+                        <span>👁️</span>
+                        <div>
+                            <small>Visibility</small>
+                            <strong id="visibility">10 km</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat">
+                        <span>🌡️</span>
+                        <div>
+                            <small>Pressure</small>
+                            <strong id="pressure">1012 hPa</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="forecast-section">
+
+                <div class="section-title">
+                    <h2>5-Day Forecast</h2>
+                    <span>Weekly outlook</span>
+                </div>
+
+                <div class="forecast">
+
+                    <div class="forecast-card active">
+                        <p>Today</p>
+                        <span>☀️</span>
+                        <h3>29°</h3>
+                        <small>Sunny</small>
+                    </div>
+
+                    <div class="forecast-card">
+                        <p>Tue</p>
+                        <span>🌧️</span>
+                        <h3>27°</h3>
+                        <small>Rainy</small>
+                    </div>
+
+                    <div class="forecast-card">
+                        <p>Wed</p>
+                        <span>☁️</span>
+                        <h3>26°</h3>
+                        <small>Cloudy</small>
+                    </div>
+
+                    <div class="forecast-card">
+                        <p>Thu</p>
+                        <span>☀️</span>
+                        <h3>30°</h3>
+                        <small>Sunny</small>
+                    </div>
+
+                    <div class="forecast-card">
+                        <p>Fri</p>
+                        <span>🌤️</span>
+                        <h3>31°</h3>
+                        <small>Clear</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="bottom-grid">
+
+                <div class="info-card">
+                    <div class="card-title">
+                        <span>🌅</span>
+                        <h3>Sunrise & Sunset</h3>
+                    </div>
+
+                    <div class="sun-times">
+                        <div>
+                            <span>🌅</span>
+                            <div>
+                                <small>Sunrise</small>
+                                <strong>6:18 AM</strong>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span>🌇</span>
+                            <div>
+                                <small>Sunset</small>
+                                <strong>6:42 PM</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-title">
+                        <span>💡</span>
+                        <h3>Weather Tip</h3>
+                    </div>
+
+                    <p class="tip">
+                        It's a sunny day! Don't forget your sunglasses
+                        and stay hydrated. 😎
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
